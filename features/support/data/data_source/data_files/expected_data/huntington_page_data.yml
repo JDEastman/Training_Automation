@@ -1,0 +1,9 @@
+SELECT_LISTS:
+  DROPDOWN: "Option1 | Option2"
+
+RADIO_GROUP:
+  MARITAL_STATUS: "Single | Married | Divorced"
+
+TEXT:
+  COPYRIGHT: "The Huntington National Bank is an Equal Housing Lender and Member FDIC. -® & Huntington® are federally registered service marks of Huntington Bancshares Incorporated. Huntington Welcome.™ is a service mark of Huntington Bancshares Incorporated."
+  USERNAME: "Username"
