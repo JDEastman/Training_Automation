@@ -10,19 +10,6 @@ When /^(?:a|the) user navigates to the Experis website$/ do
   step "the application navigates to the Experis page"
 end
 
-When /^the user is signed into the SBD website as (.*)$/ do |user|
-  step "the user navigates to the SBD website"
-  step "the user clicks the menu list" unless ENV["browser_size"] =~ /desktop/i
-  steps %Q{
-    And the user clicks my black and decker
-    And the user fills the home page with #{user} credentials
-    And the user clicks the sign in button
-    And the user views the page
-    And the user views the page again
-    And the application navigates to the My Dashboard page
-  }
-end
-
 When /^the user closes the popup window$/ do
   begin
     @browser.windows.last.use.close
