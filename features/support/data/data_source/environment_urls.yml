@@ -1,6 +1,4 @@
 EXPERIS: "http://www.experis.com/"
-TESTING: "http://the-internet.herokuapp.com/iframe"
-HUNTINGTON: "http://www.huntington.com/"
 
-
-CAP_ONE: "http://www.lazyautomation.co.uk/lazy1.html"
+EXAMPLE1: "http://the-internet.herokuapp.com/iframe"
+EXAMPLE2: "http://www.lazyautomation.co.uk/lazy1.html"

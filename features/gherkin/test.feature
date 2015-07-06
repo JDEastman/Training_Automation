@@ -35,7 +35,7 @@ Feature: Training Examples
     Then the text for experis continued support is displayed
 
   @run
-  Scenario: Validate testing website
-    Given the user navigates to the testing website
+  Scenario: Validate example1 testing website
+    Given the user navigates to the example1 testing website
 
 

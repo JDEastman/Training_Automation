@@ -1,10 +1,8 @@
-class HomePage < SBDPage
+class Example2TestingPage < SBDPage
 
   page_url(environment_url)
 
-  in_iframe(:id => "mce_0_ifr") do |frame|
 
-  end
 
   # Name: form_field_order
   # Input: No input is needed.
@@ -21,7 +19,7 @@ class HomePage < SBDPage
   # Purpose: Return the data class for the page
 
   def self.data_class
-    HomePageData
+    Example2TestingPageData
   end
 
   # Name: page_title_validation_value

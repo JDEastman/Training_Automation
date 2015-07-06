@@ -1,8 +1,13 @@
-When /^the user navigates to the testing website$/ do
-  visit_page(HomePage)
+When /^the user navigates to the example1 testing website$/ do
+  visit_page(Example1TestingPage)
   sleep 1
-  step "the application navigates to the home page"
-  @current_page.dismiss_subscription_popup if @current_page.respond_to? "dismiss_subscription_popup"
+  step "the application navigates to the example1 testing page"
+end
+
+When /^the user navigates to the example2 testing website$/ do
+  visit_page(Example2TestingPage)
+  sleep 1
+  step "the application navigates to the example2 testing page"
 end
 
 When /^(?:a|the) user navigates to the Experis website$/ do
