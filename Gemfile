@@ -9,7 +9,7 @@ group :default do
   gem "page-object"
   gem "ffi"
   gem "selenium-webdriver"
-  gem "cuke_sniffer"
+  #gem "cuke_sniffer"
 
   #gem "ruby-oci8", "=2.1.5"
   #gem "activerecord","=3.1.3"
