@@ -14,8 +14,8 @@ class SBD
   # Purpose: Initializes the webdriver using the correct settings
 
   def initialize
-    ENV["browser_stack"] == "true" ? self.create_browserstack : self.create_browser
-    self.set_browser_experience unless ENV["browser_stack"] == "true"
+    self.create_browser
+    self.set_browser_experience
     page_object_array = []
     Dir["#{File.dirname(__FILE__)}/../pages/*.rb"].each { |f|
       page_name = f.gsub(/(.*\/)/, "").gsub(".rb","").split("_").collect { |a| (a =~ /SBD\b/i ? a.upcase : a.capitalize ) }.join("")
@@ -33,29 +33,6 @@ class SBD
   def create_browser
     environment_browser_type == 'chrome' ? (self.browser = Watir::Browser.new environment_browser_type.downcase.to_sym, :switches => ["--disable-extensions"]) :
       (self.browser = Watir::Browser.new environment_browser_type.downcase.to_sym)
-  end
-
-  def create_browserstack
-    caps = WebDriver::Remote::Capabilities.new
-    caps[:name] = "Watir WebDriver"
-
-    begin
-      device_set_up = get_data_from_yml_file("browserstack_configurations.yml")[ENV['device'].upcase.gsub(" ","_")]
-      device_set_up.each do |attribute, value|
-        caps[attribute.downcase] = value
-      end
-    rescue
-      raise "--->> Sorry, #{ENV['device'].upcase.gsub(" ","_")} is not defined in the browserstack_configuration.yml file, please verify your device name is correct or define your new device"
-    end
-
-
-    caps["browserstack.debug"] = "true"
-    caps['browserstack.local'] = "true"
-
-    self.browser = Watir::Browser.new(:remote,
-                                 :url => "http://abhirambharadwaj2:ytGSDg5JQ9xSpAyxijy6@hub.browserstack.com/wd/hub",
-                                 :desired_capabilities => caps)
-
   end
 
   def set_browser_experience()
