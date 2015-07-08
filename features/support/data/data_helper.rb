@@ -33,7 +33,7 @@ module DataHelper
   # Purpose: Returns the name of the environment (e.g. - IT, Dev)
 
   def application_environment
-    ENV['app_env'].nil? ? "QA" : ENV['app_env'].gsub(" ","_").upcase
+    ENV['app_env'].nil? ? "EXPERIS" : ENV['app_env'].gsub(" ","_").upcase
   end
 
   # Name: database_region
