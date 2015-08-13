@@ -55,7 +55,6 @@ Feature: Scenarios for Example 1
   Examples:
     | link                  | page_name             |
     | AB Testing            | AB Testing            |
-    | Basic Auth            | Basic Auth            |
     | Broken Images         | Broken Images         |
     | Challenging DOM       | Challenging DOM       |
     | Checkboxes            | Checkboxes            |
