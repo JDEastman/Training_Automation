@@ -11,6 +11,7 @@ Feature: Training Examples
     And the user fills the Experis Jobs page with local quality assurance
     And the user clicks search for jobs
     Then the page displays the job results section
+    And J sees this
 
   Scenario: Verify language pick list values - Colombia
     Given a user navigates to the Experis website
