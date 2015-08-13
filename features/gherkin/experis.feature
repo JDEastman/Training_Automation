@@ -34,6 +34,4 @@ Feature: Training Examples
     And the user clicks the experis continued support
     Then the text for experis continued support is displayed
 
-Josh sees this
-
 
