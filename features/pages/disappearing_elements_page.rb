@@ -1,18 +1,6 @@
-class Example1TestingPage < SBDPage
+class DisappearingElementsPage < SBDPage
 
   page_url(environment_url)
-
-  link(:ab_testing, :href => "/abtest")
-  link(:basic_auth, :href => "/basic_auth")
-  link(:broken_images, :href => "/broken_images")
-  link(:challenging_dom, :href => "/challenging_dom")
-  link(:checkboxes, :href => "/checkboxes")
-  link(:context_menu, :href => "/context_menu")
-  link(:disappearing_elements, :href => "/disappearing_elements")
-  link(:drag_and_drop, :href => "/drag_and_drop")
-  link(:dropdown, :href => "/dropdown")
-  link(:dynamic_content, :href => "/dynamic_content")
-
 
   # Name: form_field_order
   # Input: No input is needed.
@@ -29,7 +17,7 @@ class Example1TestingPage < SBDPage
   # Purpose: Return the data class for the page
 
   def self.data_class
-    Example1TestingPageData
+    DisappearingElementsPageData
   end
 
   # Name: page_title_validation_value
@@ -37,7 +25,7 @@ class Example1TestingPage < SBDPage
   # Purpose: return the validation value for the page title
 
   def self.page_title_validation_value
-    /Welcome to the Internet/
+    /Disappearing Elements/
   end
 
   # Name: page_url_validation_value
@@ -45,7 +33,7 @@ class Example1TestingPage < SBDPage
   # Purpose: return the validation value for the page url
 
   def self.page_url_validation_value
-    /the-internet/
+    /disappearing_elements/
   end
 
 end
