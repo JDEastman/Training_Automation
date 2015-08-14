@@ -1,9 +1,5 @@
 Feature: Scenarios for Example 1
 
- # Background: Navigate to Example 1 Testing website
- #   Given the user navigates to the example1 testing website
-
-
   Scenario: Validate example1 testing website
     Given the user navigates to the example1 testing website
     When the user clicks AB Testing
