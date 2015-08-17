@@ -9,6 +9,7 @@ group :default do
   gem "page-object"
   gem "ffi"
   gem "selenium-webdriver"
+  gem "pretty_face"
 
   gem "cuke_sniffer"
   gem "rubocop"

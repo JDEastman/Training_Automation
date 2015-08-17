@@ -24,7 +24,7 @@ module RakeProfileHelper
       html htm yml jpg JPG tif bmp png doc docx xls xml pdf txt dot bat PNG mdb zip
     }.inject(" "){|s, ext| s += "--exclude \\.#{ext} "}
 
-    task.cucumber_opts = "#{run_folder} --guess --color --verbose #{ignore_extensions} --format html --out #{output_folder + html_name}.html #{and_tags} #{or_tags}"
+    task.cucumber_opts = "#{run_folder} --guess --color --verbose #{ignore_extensions} --format html --out #{output_folder + html_name}.html #{and_tags} #{or_tags} --format json -o cucumber.json"
    end
 
   def self.get_or_tags_array()
