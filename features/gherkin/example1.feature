@@ -1,3 +1,4 @@
+@example1
 Feature: Scenarios for Example 1
 
   Scenario: Validate example1 testing website
